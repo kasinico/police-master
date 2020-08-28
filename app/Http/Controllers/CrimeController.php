@@ -15,7 +15,7 @@ use File;
 
 class CrimeController extends Controller
 {
-    //
+    //This controller is for crime view folder.
     public function index(){
        $crime_types = DB::table('crimes')->get();
 
@@ -30,11 +30,12 @@ class CrimeController extends Controller
       {
           //validation rules
           $validator = Validator::make($request->all(),[
+            'crime_type' => 'required|string',
             'date' => 'required|date',
             'location' => 'required|string',
             'whatHappened' => 'required|string',
             'reportedBy' => 'required|string',
-
+            
             'deleted' => 'required',
           ]);
 
@@ -44,6 +45,7 @@ class CrimeController extends Controller
             return redirect('crimes.add')->withErrors($validator)->withInput();
           }
           else {
+            $crime_type = $request->crime_type;
             $date = $request->date;
             $location = $request->location;
             $whatHappened = $request->whatHappened;
@@ -53,6 +55,7 @@ class CrimeController extends Controller
 
               //insert array
 
+              $data_insert['crime_type'] = $crime_type;
               $data_insert['date'] = $date;
               $data_insert['location'] = $location;
               $data_insert['whatHappened'] = $whatHappened;
@@ -67,7 +70,7 @@ class CrimeController extends Controller
               if(DB::table('crimes')->insert($data_insert))
               {
                 Session::flash('success', 'Record saved successfully');
-                return Redirect::to('crimes');
+                return Redirect::to('crimes.add');
               }
               else
               {
@@ -101,6 +104,7 @@ class CrimeController extends Controller
         public function update(Request $request, $id){
           //validation rules
           $validator = Validator::make($request->all(),[
+            'crime_type' => 'required|string',
             'date' => 'required|date',
             'location' => 'required|string',
             'whatHappened' => 'required|string|200',
@@ -116,6 +120,7 @@ class CrimeController extends Controller
             return redirect('crimes/show/'.$id)->withErrors($validator)->withInput();
           }
           else {
+            $crime_type = $request->crime_type;
             $date = $request->date;
             $location = $request->location;
             $whatHappened = $request->whatHappened;

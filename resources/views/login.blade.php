@@ -52,7 +52,12 @@ body{
    <p> </p>
           <p id="go to login">Already have an acount login here</p>
 
+         
+
        <a href="{{ route('login') }}"class="btn btn-primary">login</a>
+       <p id="go to login">Already have an acount login here</p>
+       <p id="go to login">Already have an acount login here</p>
+       <p id="go to login">Already have an acount login here</p>
 	   <p>
 
        

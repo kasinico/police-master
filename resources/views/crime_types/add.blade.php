@@ -109,8 +109,13 @@
                   <i class="form-group__bar"></i>
               </div>
 			 
-
+<div class="form-group">
+                  <label>Gender</label>
+                    <input type="text" name="gender" placeholder="M / F" class="form-control">
+                    <i class="form-group__bar"></i>
+                </div>
 	    <div class="row">
+      
 			<div class="col-sm-4">
 
                 <div class="form-group">

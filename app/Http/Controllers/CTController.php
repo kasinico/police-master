@@ -12,9 +12,10 @@ use Redirect;
 use Session;
 use File;
 
+
 class CTController extends Controller
 {
-
+  //this controller is for crime types view folder.
   public function index(){
      $crime_types = DB::table('crime_types')->where(['deleted'=>'N'])->get();
      return view('crime_types.all',['crime_types'=>$crime_types]);

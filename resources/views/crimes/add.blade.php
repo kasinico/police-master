@@ -4,7 +4,7 @@
   <section class="content">
     <div class="content__inner">
         <header class="content__title">
-            <h1>Add crime type</h1>
+            <h1>Recording crime type</h1>
 
             <div class="actions">
             <a href="#" class="actions__item zmdi zmdi-trending-up"></a>
@@ -23,7 +23,7 @@
 
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Fill in the required details to add a new crime type</h4>
+                <h4 class="card-title">Fill in the required details to Record a new crime type</h4>
                 @if(Session::has('success'))
                     <div class="alert alert-success">
                       <strong>{!! Session::get('success') !!}</strong>
@@ -49,8 +49,8 @@
 					<div class="col-sm-4">
 
                 <div class="form-group">
-                  <label>crime type</label>
-                    <input type="text" name="name" placeholder="crime offence" class="form-control">
+                  <label>crime_type</label>
+                    <input type="text" name="crime_type" placeholder="crime offence" class="form-control">
                     <i class="form-group__bar"></i>
                 </div>
 				</div>

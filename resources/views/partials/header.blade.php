@@ -8,7 +8,9 @@
     </div>
 
     <div class="header__logo hidden-sm-down">
+    
         <h1><a href="{{ url('/dashboard') }}">VEHICLE INFORMATION TRACKING SYSTEM</a></h1>
     </div>
+    
 
 </header>

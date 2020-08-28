@@ -36,6 +36,7 @@
                               <thead class="thead-default">
                                   <tr>
 									  <th>id</th>
+                                      <th>Crime_type</th>
                                       <th>Date</th>
                                       <th>Location</th>
                                       <th>whatHappened</th>
@@ -54,6 +55,7 @@
                               <tbody>
                                   <tr>
 			                         <td>{{$st->id}}</td>
+                                     <td>{{$st->crime_type}}</td>
                                       <td>{{$st->date}}</td>
                                       <td>{{$st->location}}</td>
                                       <td>{{$st->whatHappened}}</td>
@@ -68,6 +70,7 @@
                                         <div class="dropdown-menu">
                                             <a href="crime/{{ $st->id }}/show" class="dropdown-item">Show</a>
                                             <a href="crimes/{{ $st->id }}/edit" class="dropdown-item">Edit</a>
+                                            <a href="crimes/{{ $st->id }}/delete" class="dropdown-item">Delete</a>
                                         </div>
                                       </td>
                                   </tr>
