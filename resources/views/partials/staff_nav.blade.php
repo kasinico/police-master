@@ -4,7 +4,7 @@
             <div class="user__info" data-toggle="dropdown">
                 <img class="user__img" src="demo/img/profile-pics/8.jpg" alt="">
                 <div>
-                    <div class="user__name">Malinda Hollaway</div>
+                    <div class="user__name">Malinda</div>
                     <div class="user__email">malinda-h@gmail.com</div>
                 </div>
             </div>
